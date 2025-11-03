@@ -28,6 +28,6 @@ Chapter 22: Blockchain Applications and What's Next
 ```
 
 
-#### Sequencew
+#### Sequence
 
 
