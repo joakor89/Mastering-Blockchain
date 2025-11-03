@@ -47,10 +47,8 @@ My background lies in data science, quantitative modeling, and machine learning,
 
 Over time, persistent interaction with blockchain developers and the accelerating relevance of decentralized infrastructures revealed a clear inflection point:
 
-```sh
-The emergence of blockchain is not merely a technological trend; it represents a structural shift in how
-societies coordinate value, trust, identity, and computation.
-```
+The emergence of blockchain is not merely a technological trend; it represents a structural shift in howsocieties coordinate value, trust, identity, and computation.
+
 
 To remain at the frontier of decision-making, innovation, and geo-economic strategy, it is not sufficient to understand blockchain conceptually—I must be able to design, audit, optimize, and deploy blockchain-based systems myself.
 
