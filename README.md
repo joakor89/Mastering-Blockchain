@@ -4,6 +4,15 @@ Based on: Mastering Blockchain, 4th Edition
 Publisher: Packt Publishing
 ISBN: 978-1-80324-106-7
 
+### Purpose of This Repository
+
+This repository accompanies a rigorous and structured study of Mastering Blockchain (4th Edition), serving as both a conceptual foundation and a practical engineering workspace for blockchain development.
+
+The goal is to progress from first principles—cryptography and distributed systems—to full-stack Web3 development, protocol-level understanding, and strategic evaluation of blockchain systems across financial and geopolitical contexts.
+
+This is not a passive reading project.
+This is a ground framework for mastering blockchain as infrastructure and as an instrument of economic coordination.
+
 
 ### Chapter's Path
 
