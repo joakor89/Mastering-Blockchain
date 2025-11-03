@@ -1,5 +1,10 @@
 # Mastering Blockchain
 
+Based on: Mastering Blockchain, 4th Edition
+Publisher: Packt Publishing
+ISBN: 978-1-80324-106-7
+
+
 ### Chapter's Path
 
 ```sh
