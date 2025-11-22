@@ -32,4 +32,6 @@ cat message.b64
 
 openssl enc -d -aes-256-cbc -in message.bin -out message.dec
 
+openssl enc -d -base64 -in message.b64 -out message.ptx
 
+ cat message.ptx
