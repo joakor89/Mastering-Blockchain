@@ -3,7 +3,7 @@
 # ======================================================
 # Author: Joaquin Romero
 # Script: Assymetric Cryptography
-# Description: Encrypts and decrypts a test file using AES-256.
+# Demonstrates RSA key usage to encrypt and decrypt a test file using OpenSSL (pkeyutl + OAEP).
 # ======================================================
 
 #### Encrypting and Decrypting with RSA
