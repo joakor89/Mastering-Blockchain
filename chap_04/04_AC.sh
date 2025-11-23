@@ -25,6 +25,46 @@ openssl pkeyutl -decrypt -inkey privatekey.pem -in message.rsa -out message.dec
 
 cat message.dec
 
+#### The Discrete Logarithm Problem
+
+openssl ecparam -param_enc explicit -text -noout -name secp256k1
+
+##### Generating keys with ECC
+
+openssl ecparam -list_curves
+
+openssl ecparam -name secp256k1 -genkey -noout -out ec-privatekey.pem
+
+cat ec-privatekey.pem
+
+openssl ec -in ec-privatekey.pem -pubout -out ec-pubkey.pem
+
+cat ec-pubkey.pem
+
+openssl ec -in ec-privatekey.pem -text -noout
+
+openssl ec -in ec-pubkey.pem -pubin - text -noout
+
+openssl ecparam -name secp256k1 -out secp256k1.pem
+
+cat secp256k1.pem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
