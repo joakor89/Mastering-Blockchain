@@ -84,6 +84,38 @@ openssl req -new -key eccprivatekey.pem -x509 -nodes -days 365 - out ecccertific
 
 openssl x509 -in ecccertificate.pem -text -noout
 
+##############################################################
+# ECDSA OPERATIONS — MODERN OPENSSL 3.x WORKFLOW
+# Curve: secp256k1 (used in Bitcoin & Ethereum)
+##############################################################
+
+# 1. Generate an EC private key using the secp256k1 elliptic curve
+openssl ecparam -genkey -name secp256k1 -noout -out eccprivatekey.pem
+
+# 2. Display the generated private key (optional — for inspection only)
+cat eccprivatekey.pem
+
+# 3. Derive the corresponding EC public key from the private key
+openssl ec -in eccprivatekey.pem -pubout -out eccpublickey.pem
+
+# 4. Create a test message to sign
+echo "testing" > testsign.txt
+cat testsign.txt
+
+# 5. Sign the message using ECDSA with SHA-256 (modern and secure)
+# NOTE: The old option "-ecdsa-with-SHA1" is deprecated in OpenSSL 3.x.
+openssl dgst -sha256 -sign eccprivatekey.pem -out ecsign.bin testsign.txt
+
+# 6. Verify the ECDSA signature using the EC public key
+openssl dgst -sha256 -verify eccpublickey.pem -signature ecsign.bin testsign.txt
+
+# 7. Generate a self-signed X.509 certificate using the EC private key
+# This is commonly used for TLS experiments and PKI fundamentals.
+openssl req -new -key eccprivatekey.pem -x509 -nodes -days 365 -out ecccertificate.pem
+
+# 8. Display the contents of the generated certificate
+openssl x509 -in ecccertificate.pem -text -noout
+
 
 
 
