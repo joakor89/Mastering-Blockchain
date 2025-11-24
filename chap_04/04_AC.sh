@@ -61,13 +61,28 @@ openssl dgst -sha256 -verify publickey.pem -signature signature.bin message.txt
 
 openssl dgst -sha256 -verify publickey.pem –signature someothersignature.bin message.txt
 
-#### 
+#### Generating ECDSA Digital Signatures
+
+openssl ecparam -genkey -name secp256k1 -noout -out eccprivatekey.pem
+
+cat eccprivatekey.pem
+
+openssl ec -in eccprivatekey.pem -pubout -out eccpublickey.pem
 
 
+echo testing > testsign.txt
 
+cat testsign.txt
 
+openssl dgst -ecdsa-with-SHA1 -sign eccprivatekey.pem testsign.txt > ecsign.bin
 
+###### -> DEPRECATED: openssl dgst -ecdsa-with-SHA1 -verify eccpublickey.pem -signature ecsign.bin testsign.txt
 
+openssl dgst -sha256 -sign eccprivatekey.pem -out ecsign.bin testsign.bin
+
+openssl req -new -key eccprivatekey.pem -x509 -nodes -days 365 - out ecccertificate.pem
+
+openssl x509 -in ecccertificate.pem -text -noout
 
 
 
