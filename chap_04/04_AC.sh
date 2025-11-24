@@ -49,10 +49,17 @@ openssl ecparam -name secp256k1 -out secp256k1.pem
 
 cat secp256k1.pem
 
+#### Generating RSA Digital Signatures
 
+openssl dgst -sha256 message.txt
 
+openssl dgst -sha256 -sign privatekey.pem -out signature.bin message.txt
 
+cat signature.bin
 
+openssl dgst -sha256 -verify publickey.pem -signature signature.bin message.txt
+
+openssl dgst -sha256 -verify publickey.pem –signature someothersignature.bin message.txt
 
 
 
