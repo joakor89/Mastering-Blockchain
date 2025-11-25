@@ -116,9 +116,51 @@ openssl req -new -key eccprivatekey.pem -x509 -nodes -days 365 -out ecccertifica
 # 8. Display the contents of the generated certificate
 openssl x509 -in ecccertificate.pem -text -noout
 
+#### Base64
 
+##############################################################
+# RANDOM KEY GENERATION (OpenSSL 3.x)
+# Demonstrates how to generate cryptographically secure
+# random values in Base64 and Hex formats.
+##############################################################
 
+# ------------------------------------------------------------
+# INCORRECT USAGE:
+# The option '-base64' must appear BEFORE the byte length.
+# The following command is invalid because '16' is parsed
+# as a subcommand instead of the argument to 'rand'.
+#
+# openssl rand 16 -base64
+#
+# RESULT:
+#   rand: Use -help for summary.
+#
+# REASON:
+# OpenSSL expects the structure:
+#   openssl <command> <options> <arguments>
+# Therefore the correct order is:
+#   openssl rand -base64 <byte_length>
+# ------------------------------------------------------------
 
+# ------------------------------------------------------------
+# CORRECT USAGE (Base64 output)
+# Generates 16 cryptographically secure random bytes encoded in Base64.
+# Practical applications:
+# - Session tokens
+# - Temporary keys
+# - Nonces
+# ------------------------------------------------------------
+openssl rand -base64 16
+
+# ------------------------------------------------------------
+# CORRECT USAGE (Hex output)
+# Generates 16 secure random bytes encoded as hexadecimal.
+# Widely used for:
+# - AES keys (use 32 bytes for AES-256)
+# - HMAC keys
+# - Blockchain hashing experiments
+# ------------------------------------------------------------
+openssl rand -hex 16
 
 
 
