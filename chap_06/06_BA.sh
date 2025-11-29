@@ -1,0 +1,3 @@
+#
+
+bitcoin-cli getrawtransaction
