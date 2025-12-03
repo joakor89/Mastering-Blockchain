@@ -23,3 +23,17 @@ sudo make install
 #### Starting up a node in the testnet
 
 bitcoind --testnet -daemon
+
+bitcoin-cli --testnet <command>
+
+bitcoin-qt –testnet
+
+bitcoind --testnet -daemon
+
+bitcoin-cli --testnet getmininginfo
+
+bitcoin-cli --testnet help
+
+bitcoin-cli --testnet stop
+
+#### 
