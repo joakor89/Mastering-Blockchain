@@ -18,4 +18,6 @@ geth
 
  geth account list
 
- #### 
+ #### Geth console
+
+ geth console
