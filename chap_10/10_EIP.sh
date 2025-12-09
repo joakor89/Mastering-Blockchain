@@ -21,3 +21,9 @@ geth
  #### Geth console
 
  geth console
+
+ #### Geth attach
+
+ geth attach
+
+ eth.accounts
