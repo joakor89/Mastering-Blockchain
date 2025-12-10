@@ -58,3 +58,30 @@ curl -X POST --insecure \
     --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[], "id":64}'\ 
     http://localhost:8545
 
+#### Connecting to test networks
+
+geth --sepolia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
