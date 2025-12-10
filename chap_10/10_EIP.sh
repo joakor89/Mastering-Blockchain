@@ -62,6 +62,80 @@ curl -X POST --insecure \
 
 geth --sepolia
 
+#### Starting up the private network
+
+mkdir ~/etherprivate
+
+geth --datadir ~/etherprivate init ~/etherprivate/privategenesis.json
+
+ls -l ~/etherprivate/privategenesis.json
+
+geth --datadir ~/etherprivate account new
+
+geth --datadir ~/etherprivate \
+  --networkid 786 \
+  --http \
+  --http.addr 127.0.0.1 \
+  --http.port 8545 \
+  --http.api "web3,eth,net,debug,txpool,miner" \
+  --http.corsdomain "*"
+
+rm -rf ~/etherprivate/geth
+
+nano ~/etherprivate/privategenesis.json
+
+{
+  "config": {
+    "chainId": 786,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirGlacierBlock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "arrowGlacierBlock": 0,
+    "grayGlacierBlock": 0,
+    "terminalTotalDifficulty": 0,
+    "clique": {
+      "period": 5,
+      "epoch": 30000
+    }
+  },
+  "nonce": "0x0",
+  "timestamp": "0x0",
+  "extraData": "0x", 
+  "gasLimit": "0x8000000",
+  "difficulty": "0x1",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "alloc": {},
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}
+
+#### Experimenting with the Geth JavaScript console
+
+net
+
+eth.getBalance(eth.coinbase)
+
+web3.fromWei(eth.getBalance(eth.coinbase), "ether")
+
+eth.gasPrice
+
+eth.blockNumber
+
+debug.getBlockRlp(0)
+
+#### Mining and sending transactions
+
+miner.start(2)
 
 
 
