@@ -137,6 +137,51 @@ debug.getBlockRlp(0)
 
 miner.start(2)
 
+miner.stop()
+
+personal.newAccount("Password123")
+
+personal.unlockAccount("...")
+
+geth --datadir ~/etherprivate/ --allow-insecure-unlock \
+    --networkid 786 --http \
+    --http.api 'web3,eth,net,debug,personal' --http.corsdomain '*'
+
+personal.listAccounts
+
+personal.unlockAccount("...")
+
+personal.unlockAccount("...")
+
+web3.fromWei(eth.getBalance("..."), "ether")
+
+web3.fromWei(eth.getBalance(eth.coinbase), "ether")
+
+web3.fromWei(eth.getBalance("..."), "ether")
+
+eth.sendTransaction({ from: "0x6e94bdb15141491bc3b9de3a9cab9d87ae2af82f", to: "0x0f044cb4a0f924b6cfcf07c6c57945a0af75ec5b", value: 100 })
+
+eth.sendTransaction({ from: "0x6e94bdb15141491bc3b9de3a9cab9d87ae2af82f", to: "0x0f044cb4a0f924b6cfcf07c6c57945a0af75ec5b", value: web3.toWei(100, "ether") })
+
+miner.start()
+
+web3.fromWei(eth.getBalance("..."), "ether")
+
+eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: 100})
+
+eth.getTransaction("...")
+
+#### Introducing Remix IDE
+
+
+
+
+
+
+
+
+
+
 
 
 
