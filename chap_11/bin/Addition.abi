@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"y","type":"uint8"},{"internalType":"uint8","name":"z","type":"uint8"}],"name":"addx","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"retrievex","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"}]
