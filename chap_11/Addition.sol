@@ -34,3 +34,18 @@ contract valueChecker {
 }
 
 #### Functions
+
+pragma solidity >8.0.0;
+contract Test1
+{
+uint x=2;
+function addition1() public view returns (uint y)
+{
+y=x+2;
+}
+}
+
+
+
+
+
