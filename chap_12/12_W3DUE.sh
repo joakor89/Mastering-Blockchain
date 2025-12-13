@@ -18,7 +18,41 @@ geth attach http://127.0.0.1:8001
 
 web3.version
 
+#### Deploying contracts
+
+geth --datadir ~/etherprivate \
+    --networkid 786 --allow-insecure-unlock \
+    --http--http.api "web3,net,eth,debug,personal" \
+    --http.port 8001 --http.corsdomain https://remix.ethereum.org
+
+geth --datadir ~/etherprivate \
+    --networkid 786 --allow-insecure-unlock \
+    --http--http.api "web3,net,eth,debug,personal" \
+    --http.port 8001 --http.corsdomain http://localhost:7777
+
+geth --datadir ~/etherprivate \
+    --networkid 786 \
+    --http --http.api "web3,net,eth,debug" \
+    --http.port 8001 --http.corsdomain "*"
+
+geth attach ~/etherprivate/geth.ipc
+
+personal.listAccounts[0]
+
+personal.unlockAccount(personal.listAccounts[0])
+
+web3.personal.unlockAccount("0xc9bf76271b9e42e4bf7e1888e0f52351bdb65811", "Password123", 0);
+
 #### 
+
+miner.start()
+
+var valuecheckerContract = web3.eth.contract([{"constant": false,
+    "inputs": [{"name": "x","type": "uint8"}],"name": "Matcher","outputs":
+    [{"name": "","type": "bool"}],"payable": false,"stateMutability":
+    "nonpayable","type": "function"},{"anonymous": false,"inputs":
+    [{"indexed": false,"name": "returnValue","type": "bool"}],"name":
+    "valueEvent","type": "event"}]);
 
 
 
