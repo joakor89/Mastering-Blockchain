@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SimpleContract Interactor</title>
+
+    <!-- Load Web3 first, then your app code -->
+    <script src="./web3.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+
+  <body>
+    <p>Enter your value:</p>
+    <input type="text" id="txtValue" value="" />
+
+    <p>
+      Click the "get decision" button to get the decision from the smart
+      contract.
+    </p>
+    <button type="button" onclick="myFunction()">get decision</button>
+
+    <p id="decision"></p>
+
+    <p>
+      Calling the contract manually with hardcoded values, result logged in
+      browser debug console:
+    </p>
+    <button type="button" onclick="callMatcherTrue()">callTrue</button>
+    <button type="button" onclick="callMatcherFalse()">callFalse</button>
+  </body>
+</html>
