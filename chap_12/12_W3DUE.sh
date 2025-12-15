@@ -83,7 +83,9 @@ curl -X POST -H "Content-Type: application/json" \
     --data '{"jsonrpc":"2.0","method":"personal_listAccounts","params":[],"id":67}'
     http://localhost:8001
 
-#### 
+#### Installing the web3.js JavaScript library
+
+npm install web3
 
 
 
