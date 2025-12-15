@@ -106,7 +106,17 @@ web3 = new Web3(new Web3.providers.HttpProvider("http://localhost: 8545"));
 
 # ------------- app.js JavaScript file -----------------
 
-#### 
+#### Installing and initializing Truffle
+
+npm install -g truffle
+
+mkdir testdapp
+
+truffle init
+
+tree .
+
+#### Compiling, testing, and migrating using Truffle
 
 
 
