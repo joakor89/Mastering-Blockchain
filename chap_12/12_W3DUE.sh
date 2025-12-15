@@ -79,6 +79,12 @@ valuechecker.abi
 
 #### Interacting with Geth using POST requests
 
+curl -X POST -H "Content-Type: application/json" \
+    --data '{"jsonrpc":"2.0","method":"personal_listAccounts","params":[],"id":67}'
+    http://localhost:8001
+
+#### 
+
 
 
 
