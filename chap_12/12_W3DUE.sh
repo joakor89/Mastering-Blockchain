@@ -87,7 +87,22 @@ curl -X POST -H "Content-Type: application/json" \
 
 npm install web3
 
+#### Creating a web3 object
 
+# ------------------- Web3 Object ----------------------
+
+if (typeof web3 !== 'undefined')
+{
+web3 = new Web3(web3.currentProvider);
+}
+else
+{
+web3 = new Web3(new Web3.providers.HttpProvider("http://localhost: 8545"));
+}
+
+# ------------------------------------------------------
+
+#### 
 
 
 
