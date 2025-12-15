@@ -118,7 +118,19 @@ tree .
 
 #### Compiling, testing, and migrating using Truffle
 
+mkdir tproject
 
+cd tproject
+
+truffle unbox metacoin
+
+truffle compile
+
+truffle test
+
+truffle migrate
+
+####
 
 
 
