@@ -7,6 +7,10 @@
 # ======================================================
 
 #### Interacting with contracts using Web3 and Geth
+
+# ----------------- Smart Contract ---------------------
+# ------------------------------------------------------
+
 ##### ---> Snippets Updated
 
 geth --dev \
@@ -54,10 +58,26 @@ var valuecheckerContract = web3.eth.contract([{"constant": false,
     [{"indexed": false,"name": "returnValue","type": "bool"}],"name":
     "valueEvent","type": "event"}]);
 
+#### Using solc to generate ABI and code
+
+solc --abi valuechecker.sol
+
+solc --bin valuechecker.sol
 
 
+# ----------------- Smart Contract ---------------------
 
+# ------------------------------------------------------
 
+#### Querying contracts with Geth
+
+eth.getBalance(valuechecker.address)
+
+valuechecker.transactionHash
+
+valuechecker.abi
+
+#### Interacting with Geth using POST requests
 
 
 
