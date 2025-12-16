@@ -130,7 +130,17 @@ truffle test
 
 truffle migrate
 
-####
+#### Interacting with the contract
+
+truffle console
+
+truffle(development)>
+
+truffle(development)> MetaCoin.address
+
+truffle(development)> MetaCoin.web3.eth.
+
+
 
 
 
