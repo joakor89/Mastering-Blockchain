@@ -148,6 +148,20 @@ cd simple
 
 truffle init
 
+truffle migrate
+
+truffle console
+
+truffle(development)> Addition.address
+
+truffle(development)> let additioncontract = await Addition.deployed()
+
+truffle(development)> additioncontract.addx(2,2)
+
+#### 
+
+
+
 
 
 
