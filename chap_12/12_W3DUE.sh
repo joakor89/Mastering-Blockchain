@@ -158,13 +158,25 @@ truffle(development)> let additioncontract = await Addition.deployed()
 
 truffle(development)> additioncontract.addx(2,2)
 
-#### 
+#### Deployment on decentralized storage using IPFS
 
+curl -O https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_darwin-amd64.tar.gz
 
+tar -xvzf go-ipfs_v0.12.2_darwin-amd64.tar.gz
 
+cd go-ipfs
 
+./install.sh
 
+ipfs --version
 
+ipfs init
+
+ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
+
+ipfs daemon
+
+ipfs add . --recursive –-progress
 
 
 
