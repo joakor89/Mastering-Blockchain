@@ -140,7 +140,13 @@ truffle(development)> MetaCoin.address
 
 truffle(development)> MetaCoin.web3.eth.
 
+#### Using Truffle to test and deploy smart contracts
 
+mkdir simple
+
+cd simple
+
+truffle init
 
 
 
