@@ -178,6 +178,8 @@ ipfs daemon
 
 ipfs add . --recursive –-progress
 
+ipfs pin add Qmcuo7cC9ycKaSgNN12kdrpx6h6RoHbtZxyMX8d4myqLUM
+
 
 
 
