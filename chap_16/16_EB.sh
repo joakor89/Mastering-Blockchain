@@ -2,7 +2,7 @@
 
 # ======================================================
 # Author: Joaquin Lugo
-# Script: Ethereum Enterprice
+# Script: Enterprice Blockchain
 # Description: 
 # ======================================================
 
@@ -16,6 +16,14 @@
 npm -v
 
 node –v
+
+npm install -g quorum-wizard
+
+quorum-wizard
+
+cd network/4-nodes-istanbul-tessera-bash
+
+./start.sh
 
 
 
