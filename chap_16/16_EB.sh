@@ -68,10 +68,27 @@ var simple = simpleContract.at("Add your Tx")
 
 simple.get()
 
-##### -> Node
+##### -> Node 3
 
+geth attach qdata/dd3/geth.ipc
 
+var abi =
+[{"constant":true,"inputs":[],"name":"storedData","outputs":[{"name":"",
+"type":"uint256"}],"payable":false,"type":"function"},{"constant":false,
+"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],
+"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"get",
+"outputs":[{"name":"retVal","type":"uint256"}],"payable":false,
+"type":"function"},{"inputs":[{"name":"initVal","type":"uint256 "}],
+"payable":false,"type":"constructor"}];
 
+var simpleContract = eth.contract(abi)
 
+var simple = simpleContract.at("Add your Tx"")
+
+simple.get()
+
+geth attach qdata/dd4/geth.ipc
+
+##### -> Node 
 
 
