@@ -25,5 +25,9 @@ cd network/4-nodes-istanbul-tessera-bash
 
 ./start.sh
 
+#### Running a private transaction
+
+4-nodes-istanbul-tessera-bash ./runscript.sh private_contract.js
+
 
 
