@@ -107,6 +107,26 @@ var simple = simpleContract.at("")
 
 simple.get()
 
+### Viewing the transaction in Cakeshop
 
+#### Further investigation with Geth
+
+geth attach
+
+geth attach qdata/dd1/geth.ipc
+
+eth.getTransaction("Add your Tx")
+
+eth.getTransactionReceipt("Add your Tx")
+
+eth.getCode("")
+
+geth attach qdata/dd2/geth.ipc
+
+eth.getCode("")
+
+geth attach qdata/dd3/geth.ipc
+
+eth.getCode("")
 
 
