@@ -20,3 +20,22 @@ tar -zxvf geth-linux-arm7-1.5.6-2a609af5.tar
 ./geth init genesis.json
 
 admin.nodeInfo
+
+cat static-nodes.json
+
+#### Setting up The 1st Node
+
+geth --datadir .ethereum/privatenet/ --networkid 786 --maxpeers 5 --http \
+    --http.api web3,eth,debug,personal,net --http.port 9001 --http.corsdomain "*" \
+    --port 30301 --identity "drequinox"
+
+
+
+
+
+
+
+
+
+
+
