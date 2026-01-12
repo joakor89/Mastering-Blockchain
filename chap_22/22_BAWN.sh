@@ -29,6 +29,24 @@ geth --datadir .ethereum/privatenet/ --networkid 786 --maxpeers 5 --http \
     --http.api web3,eth,debug,personal,net --http.port 9001 --http.corsdomain "*" \
     --port 30301 --identity "drequinox"
 
+#### Setting up The Raspberry Pi Node
+
+./geth --networkid 786 --maxpeers 5 --http --http.api \ 
+    web3,eth,debug,personal,net --http.port 9002 --http.corsdomain "*" --port 30302 \
+    --identity "raspberry"
+
+geth attach
+
+geth attach ipc:.ethereum/privatenet/geth.ipc
+
+#### Installing Node.js
+
+
+
+
+
+
+
 
 
 
