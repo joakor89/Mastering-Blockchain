@@ -41,11 +41,25 @@ geth attach ipc:.ethereum/privatenet/geth.ipc
 
 #### Installing Node.js
 
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 
+sudo apt-get install nodejs
 
+npm -v
 
+node -v
 
+npm install web3@0.18.0
 
+npm install web3@0.20.2
+
+npm install onoff --save
+
+#### Developing & Running a Solidity Contract
+
+###### -> Check the file up at the same folder
+
+truffle migrate
 
 
 
