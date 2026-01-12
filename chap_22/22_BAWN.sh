@@ -61,9 +61,9 @@ npm install onoff --save
 
 truffle migrate
 
+web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9002"));
 
-
-
+node index.js
 
 
 
