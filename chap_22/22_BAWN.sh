@@ -13,4 +13,10 @@
 
 uname -a
 
+wget https://gethstore.blob.core.windows.net/builds/geth-linux- arm7-1.5.6-2a609af5.tar.gz
 
+tar -zxvf geth-linux-arm7-1.5.6-2a609af5.tar
+
+./geth init genesis.json
+
+admin.nodeInfo
